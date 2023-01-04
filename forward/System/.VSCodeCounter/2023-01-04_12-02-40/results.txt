@@ -1,0 +1,58 @@
+Date : 2023-01-04 12:02:40
+Directory : d:\vscode\水果店\forward\System\src
+Total : 27 files,  2378 codes, 75 comments, 658 blanks, all 3111 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| Vue        |         20 |      1,772 |         58 |        570 |      2,400 |
+| JavaScript |          5 |        515 |         17 |         86 |        618 |
+| CSS        |          2 |         91 |          0 |          2 |         93 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                         | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                            |         27 |      2,378 |         75 |        658 |      3,111 |
+| components                                                   |         19 |      1,760 |         58 |        565 |      2,383 |
+| routers                                                      |          1 |        122 |          5 |         11 |        138 |
+| static                                                       |          1 |         82 |          0 |          1 |         83 |
+| static\CSS                                                   |          1 |         82 |          0 |          1 |         83 |
+| store                                                        |          2 |        362 |         10 |         68 |        440 |
++--------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                     | language   | code       | comment    | blank      | total      |
++--------------------------------------------------------------+------------+------------+------------+------------+------------+
+| d:\vscode\水果店\forward\System\src\App.vue                     | Vue        |         12 |          0 |          5 |         17 |
+| d:\vscode\水果店\forward\System\src\components\Favorate.vue     | Vue        |         13 |          0 |          5 |         18 |
+| d:\vscode\水果店\forward\System\src\components\Login.vue        | Vue        |        148 |          6 |         29 |        183 |
+| d:\vscode\水果店\forward\System\src\components\NavigateUser.vue | Vue        |        110 |          6 |         31 |        147 |
+| d:\vscode\水果店\forward\System\src\components\ShopCar.vue      | Vue        |        230 |         18 |         93 |        341 |
+| d:\vscode\水果店\forward\System\src\components\Stock.vue        | Vue        |         69 |          3 |         22 |         94 |
+| d:\vscode\水果店\forward\System\src\components\TopNavigate.vue  | Vue        |         81 |          8 |         33 |        122 |
+| d:\vscode\水果店\forward\System\src\components\UserBaseInfo.vue | Vue        |        140 |          3 |         47 |        190 |
+| d:\vscode\水果店\forward\System\src\components\UserMsg.vue      | Vue        |         64 |          0 |         28 |         92 |
+| d:\vscode\水果店\forward\System\src\components\address.vue      | Vue        |         70 |          2 |         24 |         96 |
+| d:\vscode\水果店\forward\System\src\components\clearFix.vue     | Vue        |         32 |          0 |         11 |         43 |
+| d:\vscode\水果店\forward\System\src\components\goodsList.vue    | Vue        |        198 |          4 |         55 |        257 |
+| d:\vscode\水果店\forward\System\src\components\goodsShow.vue    | Vue        |         81 |          4 |         28 |        113 |
+| d:\vscode\水果店\forward\System\src\components\index.vue        | Vue        |         35 |          0 |         14 |         49 |
+| d:\vscode\水果店\forward\System\src\components\main.vue         | Vue        |        160 |          3 |         42 |        205 |
+| d:\vscode\水果店\forward\System\src\components\orderTable.vue   | Vue        |         67 |          1 |         20 |         88 |
+| d:\vscode\水果店\forward\System\src\components\orders.vue       | Vue        |         80 |          0 |         32 |        112 |
+| d:\vscode\水果店\forward\System\src\components\root.vue         | Vue        |         33 |          0 |         11 |         44 |
+| d:\vscode\水果店\forward\System\src\components\tail.vue         | Vue        |         94 |          0 |         24 |        118 |
+| d:\vscode\水果店\forward\System\src\components\userTable.vue    | Vue        |         55 |          0 |         16 |         71 |
+| d:\vscode\水果店\forward\System\src\index.css                   | CSS        |          9 |          0 |          1 |         10 |
+| d:\vscode\水果店\forward\System\src\main.js                     | JavaScript |         18 |          2 |          6 |         26 |
+| d:\vscode\水果店\forward\System\src\routers\index.js            | JavaScript |        122 |          5 |         11 |        138 |
+| d:\vscode\水果店\forward\System\src\static\CSS\Login.css        | CSS        |         82 |          0 |          1 |         83 |
+| d:\vscode\水果店\forward\System\src\store\global.js             | JavaScript |         30 |          0 |         12 |         42 |
+| d:\vscode\水果店\forward\System\src\store\user.js               | JavaScript |        332 |         10 |         56 |        398 |
+| d:\vscode\水果店\forward\System\src\vite.config.js              | JavaScript |         13 |          0 |          1 |         14 |
+| Total                                                        |            |      2,378 |         75 |        658 |      3,111 |
++--------------------------------------------------------------+------------+------------+------------+------------+------------+

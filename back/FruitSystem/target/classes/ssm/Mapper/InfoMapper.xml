@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ssm.Mapper.InfoMapper">
+
+    <select id="getUserMsg" resultType="LoginInfo">
+        select * from user_info where username = #{username};
+    </select>
+
+    <select id="getAddress" resultType="Address">
+        select id,address,status from address where username = #{username}
+    </select>
+
+    <select id="getOrder" resultType="Order">
+        select * from orders where  username = #{username}
+        <if test="terms == 'pay'">
+            and status = 1
+        </if>
+        <if test="terms == 'unpay'">
+            and status = 0
+        </if>
+        <if test="terms == 'search'">
+            and detail like "%"#{keys}"%"
+        </if>
+
+    </select>
+
+    <select id="getAllOrders" resultType="Order">
+        select * from orders where  1=1
+        <if test="terms == 'pay'">
+            and status = 1
+        </if>
+        <if test="terms == 'unpay'">
+            and status = 0
+        </if>
+        <if test="terms == 'search'">
+            and detail like "%"#{keys}"%"
+        </if>
+
+    </select>
+
+    <select id="getAllUser" resultType="Login">
+        select * from Login
+    </select>
+
+    <select id="gerAllOrder" resultType="Order">
+        select * from orders
+    </select>
+
+    <select id="getGoodsInfo" resultType="goodsInfo">
+        select * from goods;
+    </select>
+
+    <select id="getStock" resultType="Stock">
+        select * from stock;
+    </select>
+
+    <select id="getShopCar" resultType="ShopCar">
+        select distinct s.goods_name,s.goods_count,goods_context,goods_monovelent from shopCar s,goods g
+        where username = #{username} and s.goods_name  = g.goods_name
+    </select>
+
+    <update id="changePwd">
+        update login set password = #{password} where username = #{username}
+    </update>
+
+    <update id="goodsChange" parameterType="goodsInfo">
+        update goods set
+        goods_name = #{goodsmsg.goodsName},
+        goods_class = #{goodsmsg.goodsClass},
+        goods_context = #{goodsmsg.goodsContext},
+        goods_count = #{goodsmsg.goodsCount},
+        goods_monovelent = #{goodsmsg.goodsMonovelent},
+        goods_location = #{goodsmsg.goodsLocation}
+        where goods_id = #{goodsmsg.goodsId}
+    </update>
+
+    <update id="userSubmit" parameterType="LoginInfo">
+        update user_info set
+        user_id = #{loginInfo.userId},
+        gender = #{loginInfo.gender},
+        phone = #{loginInfo.phone},
+        context = #{loginInfo.context},
+        email = #{loginInfo.email},
+        birthday = #{loginInfo.birthday}
+        where username = #{loginInfo.username}
+    </update>
+
+    <update id="addFruitCount">
+        update goods set goods_count= goods_count + #{count} where goods_name = #{name};
+    </update>
+
+    <update id="addShop">
+        update shopcar set goods_count = goods_count + 1 where goods_name = #{name} and username = #{username}
+    </update>
+
+    <update id="selectAddress">
+        update address set status=0 where username = #{username};
+        update address set status = 1 where id = #{id}
+    </update>
+
+    <select id="fruitIsExist" resultType="goodsInfo">
+        select * from goods where goods_name = #{name}
+    </select>
+
+    <select id="searchShop" resultType="ShopCar">
+        select * from shopcar where goods_name = #{name} and username = #{username}
+    </select>
+
+
+    <insert id="addStock">
+        insert into stock values (null,#{name},now(),#{count})
+    </insert>
+
+    <insert id="insertShop">
+        insert into shopcar values(#{name},#{username},1)
+    </insert>
+
+    <insert id="createFruit">
+        insert into goods values (null,#{name},null,null,#{count},null,null)
+    </insert>
+
+    <insert id="addAddress">
+        update address set status=0 where username = #{username};
+        insert into address values (null,#{username},#{address},1);
+    </insert>
+
+    <insert id="addOrders">
+        insert into orders values(#{order.id},#{order.username},#{order.status},#{order.detail},now(),#{order.money});
+    </insert>
+
+
+
+
+    <delete id="deleteUser">
+        delete from login where username = #{username}
+    </delete>
+
+    <delete id="deleteOrder">
+        delete from orders where id = #{id}
+    </delete>
+
+    <delete id="goodDelete">
+        delete from goods where goods_id = #{id}
+    </delete>
+
+    <delete id="deleteAddress">
+        delete from address where id = #{id}
+    </delete>
+
+    <delete id="deleteShopOne">
+        delete from shopcar where goods_name = #{name} and username = #{username}
+    </delete>
+
+
+
+</mapper>

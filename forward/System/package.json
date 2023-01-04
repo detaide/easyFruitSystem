@@ -1,0 +1,25 @@
+{
+  "name": "System",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.0.10",
+    "axios": "^1.2.1",
+    "default-passive-events": "^2.0.0",
+    "element-china-area-data": "^5.0.2",
+    "element-plus": "^2.2.25",
+    "pinia": "^2.0.28",
+    "pinia-plugin-persist": "^1.0.0",
+    "v-region": "^2.3.0",
+    "vue": "^3.0.4",
+    "vue-cookies": "^1.8.2",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.4",
+    "vite": "^1.0.0-rc.13"
+  }
+}

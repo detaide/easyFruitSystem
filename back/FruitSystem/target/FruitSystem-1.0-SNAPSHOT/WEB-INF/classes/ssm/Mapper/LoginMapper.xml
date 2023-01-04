@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ssm.Mapper.LoginMapper">
+
+    <insert id="userInsert">
+        insert into login values (null,#{username},#{password},now(),now());
+        insert into user_info values (null,#{username},'','',121,'','','','','');
+        insert into address values(null,#{username},'demo_Address',1);
+
+    </insert>
+
+    <select id="checkUser" resultType="Login">
+        select * from login where username = #{username}
+    </select>
+
+    <select id="checkLogin" resultType="Login">
+        select * from login where username = #{username} and password = #{password};
+        update login set login_time = now() where username = #{username};
+    </select>
+
+
+
+
+
+</mapper>
